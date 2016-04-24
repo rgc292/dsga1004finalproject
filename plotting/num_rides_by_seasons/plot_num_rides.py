@@ -4,10 +4,10 @@ Code to plot the total number of rides taken during every hour of the day during
 Author: Varun D N
 Project: Big Data
 
-Input: Data directory and an optional second argument to add additional information in the plot's title like 'Male', 'Female'. Inside the directory there should be 4 files - spring.txt, summer.txt, fall.txt and winter.txt.
+Input: Data directory. Inside the directory there should be 4 files - spring.txt, summer.txt, fall.txt and winter.txt.
 	   The names of the files should be exactly the same.
 
-Output: Continuous plot with 4 subplots representing the 4 seasons mentioned above.
+Output: Continuous plot with 4 subplots representing the 4 seasons mentioned above
 '''
 
 import sys
@@ -37,7 +37,7 @@ with open(sys.argv[1] + "/spring.txt", 'r') as f:
 	for line in f:
 		data = line.strip().split('\t')
 		date = data[0]
-		rides = int(data[1].strip().split(',')[0])
+		rides = data[1]
 
 		spring_dates.append(date)
 		spring_num_rides.append(rides)
@@ -46,7 +46,7 @@ with open(sys.argv[1] + "/summer.txt", 'r') as f:
 	for line in f:
 		data = line.strip().split('\t')
 		date = data[0]
-		rides = int(data[1].strip().split(',')[0])
+		rides = data[1]
 
 		summer_dates.append(date)
 		summer_num_rides.append(rides)
@@ -55,7 +55,7 @@ with open(sys.argv[1] + "/fall.txt", 'r') as f:
 	for line in f:
 		data = line.strip().split('\t')
 		date = data[0]
-		rides = int(data[1].strip().split(',')[0])
+		rides = data[1]
 
 		fall_dates.append(date)
 		fall_num_rides.append(rides)
@@ -64,7 +64,7 @@ with open(sys.argv[1] + "/winter.txt", 'r') as f:
 	for line in f:
 		data = line.strip().split('\t')
 		date = data[0]
-		rides = int(data[1].strip().split(',')[0])
+		rides = data[1]
 
 		winter_dates.append(date)
 		winter_num_rides.append(rides)

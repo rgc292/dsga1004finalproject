@@ -1,0 +1,2 @@
+grep -e 'F' final_gender_total_rides.txt > females.txt
+grep -e 'M' final_gender_total_rides.txt > males.txt
