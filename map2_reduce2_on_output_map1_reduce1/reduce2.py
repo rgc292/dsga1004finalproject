@@ -18,7 +18,7 @@ for line in sys.stdin:
     hour = datetime[1]
     #min = datetime[2]
     
-    # Convert time from GMT to EST taking into account difference between EST and EDT
+    # Convert time from GMT to EST
     if month == '12':
         if day == '01':
             if hour == '0':
@@ -292,26 +292,33 @@ for line in sys.stdin:
         if day == '01':
             if hour == '0':
                 day = '31'
-                hour = '20'
+                hour = '19'
                 m = int(month)-1
                 month = '0'+str(m)
                 print '%s/%s/%s,%s\t%s' % (month,day,year,hour,data[1])
                                 
             elif hour == '1':
                 day = '31'
-                hour = '21'
+                hour = '20'
                 m = int(month)-1
                 month = '0'+str(m)
                 print '%s/%s/%s,%s\t%s' % (month,day,year,hour,data[1])
                                                 
             elif hour == '2':
                 day = '31'
-                hour = '22'
+                hour = '21'
                 m = int(month)-1
                 month = '0'+str(m)
                 print '%s/%s/%s,%s\t%s' % (month,day,year,hour,data[1])
                                                 
             elif hour == '3':
+                day = '31'
+                hour = '22'
+                m = int(month)-1
+                month = '0'+str(m)
+                print '%s/%s/%s,%s\t%s' % (month,day,year,hour,data[1])
+                
+            elif hour == '4':
                 day = '31'
                 hour = '23'
                 m = int(month)-1
@@ -319,7 +326,7 @@ for line in sys.stdin:
                 print '%s/%s/%s,%s\t%s' % (month,day,year,hour,data[1])
                 
             else:
-                h = int(hour)-4
+                h = int(hour)-5 #4 to 5
                 hour = str(h)
                 print '%s/%s/%s,%s\t%s' % (month,day,year,hour,data[1])
                 
@@ -330,7 +337,7 @@ for line in sys.stdin:
                     day = '0'+str(d)
                 else:
                     day = str(d)
-                hour = '20'
+                hour = '19'
                 print '%s/%s/%s,%s\t%s' % (month,day,year,hour,data[1])
                                 
             elif hour == '1':
@@ -339,7 +346,7 @@ for line in sys.stdin:
                     day = '0'+str(d)
                 else:
                     day = str(d)
-                hour = '21'
+                hour = '20'
                 print '%s/%s/%s,%s\t%s' % (month,day,year,hour,data[1])
                                                 
             elif hour == '2':
@@ -348,7 +355,7 @@ for line in sys.stdin:
                     day = '0'+str(d)
                 else:
                     day = str(d)
-                hour = '22'
+                hour = '21'
                 print '%s/%s/%s,%s\t%s' % (month,day,year,hour,data[1])
                                                 
             elif hour == '3':
@@ -357,11 +364,20 @@ for line in sys.stdin:
                     day = '0'+str(d)
                 else:
                     day = str(d)
-                hour = '23' 
+                hour = '22' 
+                print '%s/%s/%s,%s\t%s' % (month,day,year,hour,data[1])
+                
+            elif hour == '4':
+                d = int(day)-1
+                if int(day) <= 10:
+                    day = '0'+str(d)
+                else:
+                    day = str(d)
+                hour = '23'
                 print '%s/%s/%s,%s\t%s' % (month,day,year,hour,data[1])
                 
             else:
-                h = int(hour)-4
+                h = int(hour)-5 #4 to 5
                 hour = str(h)
                 print '%s/%s/%s,%s\t%s' % (month,day,year,hour,data[1])
     
@@ -372,7 +388,7 @@ for line in sys.stdin:
                     day = '31'
                 else:
                     day = '30'
-                hour = '20'
+                hour = '19'
                 m = int(month)-1
                 month = '0'+str(m)
                 print '%s/%s/%s,%s\t%s' % (month,day,year,hour,data[1])
@@ -382,7 +398,7 @@ for line in sys.stdin:
                     day = '31'
                 else:
                     day = '30'
-                hour = '21'
+                hour = '20'
                 m = int(month)-1
                 month = '0'+str(m)
                 print '%s/%s/%s,%s\t%s' % (month,day,year,hour,data[1])
@@ -392,7 +408,7 @@ for line in sys.stdin:
                     day = '31'
                 else:
                     day = '30'
-                hour = '22'
+                hour = '21'
                 m = int(month)-1
                 month = '0'+str(m)
                 print '%s/%s/%s,%s\t%s' % (month,day,year,hour,data[1])
@@ -402,13 +418,23 @@ for line in sys.stdin:
                     day = '31'
                 else:
                     day = '30'
-                hour = '23'
+                hour = '22'
                 m = int(month)-1
                 month = '0'+str(m)
                 print '%s/%s/%s,%s\t%s' % (month,day,year,hour,data[1])
                 
+            elif hour == '4':
+                if month == '08':
+                    day = '31'
+                else:
+                    day = '30'
+                hour = '23'
+                m = int(month)-1
+                month = '0'+str(m)
+                print '%s/%s/%s,%s\t%s' % (month,day,year,hour,data[1])
+
             else:
-                h = int(hour)-4
+                h = int(hour)-5 #4 to 5
                 hour = str(h)
                 print '%s/%s/%s,%s\t%s' % (month,day,year,hour,data[1])
                 
@@ -419,7 +445,7 @@ for line in sys.stdin:
                     day = '0'+str(d)
                 else:
                     day = str(d)
-                hour = '20'
+                hour = '19'
                 print '%s/%s/%s,%s\t%s' % (month,day,year,hour,data[1])
                                 
             elif hour == '1':
@@ -428,7 +454,7 @@ for line in sys.stdin:
                     day = '0'+str(d)
                 else:
                     day = str(d)
-                hour = '21'
+                hour = '20'
                 print '%s/%s/%s,%s\t%s' % (month,day,year,hour,data[1])
                                                 
             elif hour == '2':
@@ -437,7 +463,7 @@ for line in sys.stdin:
                     day = '0'+str(d)
                 else:
                     day = str(d)
-                hour = '22'
+                hour = '21'
                 print '%s/%s/%s,%s\t%s' % (month,day,year,hour,data[1])
                                                 
             elif hour == '3':
@@ -446,11 +472,20 @@ for line in sys.stdin:
                     day = '0'+str(d)
                 else:
                     day = str(d)
-                hour = '23' 
+                hour = '22' 
+                print '%s/%s/%s,%s\t%s' % (month,day,year,hour,data[1])
+                
+            elif hour == '4':
+                d = int(day)-1
+                if int(day) <= 10:
+                    day = '0'+str(d)
+                else:
+                    day = str(d)
+                hour = '23'
                 print '%s/%s/%s,%s\t%s' % (month,day,year,hour,data[1])
                 
             else:
-                h = int(hour)-4
+                h = int(hour)-5 #4 to 5
                 hour = str(h)
                 print '%s/%s/%s,%s\t%s' % (month,day,year,hour,data[1])
                 
@@ -530,7 +565,7 @@ for line in sys.stdin:
                 
                 else:
                     if int(day) == 9:
-                        h = int(hour)-4
+                        h = int(hour)-5 #4 to 5
                     else:
                         h = int(hour)-5
                     hour = str(h)
@@ -543,7 +578,7 @@ for line in sys.stdin:
                     day = '0'+str(d)
                 else:
                     day = str(d)
-                hour = '20'
+                hour = '19'
                 print '%s/%s/%s,%s\t%s' % (month,day,year,hour,data[1])
 							
             elif hour == '1':
@@ -552,7 +587,7 @@ for line in sys.stdin:
                     day = '0'+str(d)
                 else:
                     day = str(d)
-                hour = '21'
+                hour = '20'
                 print '%s/%s/%s,%s\t%s' % (month,day,year,hour,data[1])
 											
             elif hour == '2':
@@ -561,7 +596,7 @@ for line in sys.stdin:
                     day = '0'+str(d)
                 else:
                     day = str(d)
-                hour = '22'
+                hour = '21'
                 print '%s/%s/%s,%s\t%s' % (month,day,year,hour,data[1])
 											
             elif hour == '3':
@@ -570,11 +605,20 @@ for line in sys.stdin:
                     day = '0'+str(d)
                 else:
                     day = str(d)
-                hour = '23' 
+                hour = '22'
                 print '%s/%s/%s,%s\t%s' % (month,day,year,hour,data[1])
-			
+
+            elif hour == '4':
+                d = int(day)-1
+                if int(day) <= 10:
+                    day = '0'+str(d)
+                else:
+                    day = str(d)
+                hour = '23'
+                print '%s/%s/%s,%s\t%s' % (month,day,year,hour,data[1])
+
             else:
-                h = int(hour)-4
+                h = int(hour)-5 #4 to 5
                 hour = str(h)
                 print '%s/%s/%s,%s\t%s' % (month,day,year,hour,data[1]) 
                 
@@ -582,28 +626,28 @@ for line in sys.stdin:
         if day == '01':
 			if hour == '0':
 				day = '31'
-				hour = '20'
+				hour = '19'
 				m = int(month)-1
 				month = str(m)
 				print '%s/%s/%s,%s\t%s' % (month,day,year,hour,data[1])
 
 			elif hour == '1':
 				day = '31'
-				hour = '21'
+				hour = '20'
 				m = int(month)-1
 				month = str(m)
 				print '%s/%s/%s,%s\t%s' % (month,day,year,hour,data[1])
 
 			elif hour == '2':
 				day = '31'
-				hour = '22'
+				hour = '21'
 				m = int(month)-1
 				month = str(m)
 				print '%s/%s/%s,%s\t%s' % (month,day,year,hour,data[1])
 
 			elif hour == '3':
 				day = '31'
-				hour = '23'
+				hour = '22'
 				m = int(month)-1
 				month = str(m)
 				print '%s/%s/%s,%s\t%s' % (month,day,year,hour,data[1])
