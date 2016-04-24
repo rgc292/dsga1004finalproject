@@ -1,7 +1,7 @@
 '''
 Program to aggreagate the total rides taken every hour during each season and plot a bar graph of it.
 
-Input: Directory name containing the data files
+Input: Directory name containing the data files, Optional argument to make the plot title descriptive (eg: 'Weedays', 'Weekends')
 Output: Bar chart of the total number of rides taken during every hour 
 '''
 
