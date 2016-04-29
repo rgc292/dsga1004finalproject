@@ -1,0 +1,16 @@
+1- command line $ python format_time_for_sorting.py total_duration.txt | sort > final_total_duration.txt
+2- apply map6.py and reduce6.py
+3- Adjust the spacing between key and values for a '\t' only instead of ' \t'
+4- Separate by season
+command line $ grep -e '2015-04-' joined_duration_weather > ./spring_duration_weather_joined.txt
+command line $ grep -e '2015-05-' joined_duration_weather >> ./spring_duration_weather_joined.txt
+command line $ grep -e '2015-06-' joined_duration_weather >> ./spring_duration_weather_joined.txt
+command line $ grep -e '2015-07-' joined_duration_weather > ./summer_duration_weather_joined.txt
+command line $ grep -e '2015-08-' joined_duration_weather >> ./summer_duration_weather_joined.txt
+command line $ grep -e '2015-09-' joined_duration_weather >> ./summer_duration_weather_joined.txt
+command line $ grep -e '2015-10-' joined_duration_weather > ./fall_duration_weather_joined.txt
+command line $ grep -e '2015-11-' joined_duration_weather >> ./fall_duration_weather_joined.txt
+command line $ grep -e '2015-12-' joined_duration_weather >> ./fall_duration_weather_joined.txt
+command line $ grep -e '2015-01-' joined_duration_weather > ./winter_duration_weather_joined.txt
+command line $ grep -e '2015-02-' joined_duration_weather >> ./winter_duration_weather_joined.txt
+command line $ grep -e '2015-03-' joined_duration_weather >> ./winter_duration_weather_joined.txt
