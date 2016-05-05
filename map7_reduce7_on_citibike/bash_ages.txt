@@ -1,0 +1,4 @@
+command line $ grep -e ",35," rides_by_age > rides_age_35.txt
+command line $ grep -e ",20," rides_by_age > rides_age_20.txt
+command line $ grep -e ",50," rides_by_age > rides_age_50.txt
+command line $ grep -e ",99," rides_by_age > rides_age_99.txt
