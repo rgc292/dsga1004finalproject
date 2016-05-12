@@ -1,0 +1,17 @@
+{
+  "name": "rgc292",
+  "authors": [
+    "rgc292 <Rafa@192.168.1.139>"
+  ],
+  "description": "rgc292",
+  "main": "rgc292",
+  "keywords": [
+    "r"
+  ],
+  "license": "MIT",
+  "homepage": "graph",
+  "dependencies": {
+    "jQuery": "^2.2.3",
+    "d3": "^3.5.17"
+  }
+}

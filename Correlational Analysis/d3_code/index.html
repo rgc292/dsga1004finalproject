@@ -1,0 +1,50 @@
+<!-- CAVEAT: This script is a general code which was modified some times for adjusting to the specificities of each data set -->
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="./bower_components/jQuery/dist/jquery.min.js"></script>
+    <script src="./bower_components/d3/d3.min.js"></script>
+    <!-- <script type="text/javascript" src="./main.js"></script> -->
+    <link rel=stylesheet type="text/css" href="style.css"/>
+
+</head>
+<body>
+    <div id="svgCont">
+
+    </div>
+    <div>
+        <label>X-Axis</label>
+        <select id="sel-x">
+            <option value="date">Date and Hour</option>
+        </select>
+        <label>Y-Axis</label>
+        <select id="sel-y">
+            <option value="Rides">Rides</option>
+        </select><br>
+    </div><br>
+    <div>
+        Range of Months:<br>
+        <input id="mon-min" type="number" value="1">
+        <input id="mon-max" type="number" value="12"><br><br>
+        Range of Days:<br>
+        <input id="day-min" type="number" value="1">
+        <input id="day-max" type="number" value="31"><br><br>
+        Range of Hours:<br>
+        <input id="hrs-min" type="number" value="0">
+        <input id="hrs-max" type="number" value="744"><br><br>
+        <label for="graph-type">
+            <select id="graph-type">
+                <option value="sd">SD</option>
+                <option value="temp">Temp</option>
+                <option value="pcp01">Pcp01</option>
+                <option value="pcp06">Pcp06</option>
+                <option value="pcp24">Pcp24</option>
+                <option value="dewp">Dewp</option> 
+            </select><br><br>
+            <button id="update">Query</button>  
+    </div>
+
+<script type="text/javascript" src="./main.js"></script>
+
+</body>
+</html
